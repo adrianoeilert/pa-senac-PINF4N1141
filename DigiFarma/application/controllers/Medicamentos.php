@@ -20,8 +20,10 @@ class Medicamentos extends CI_Controller {
 	 */
 	public function index()
 	{
+                $this->load->helper('html');
+                $this->load->helper('url');
 		$this->load->view('templates/cabecalho');
-                $this->load->view('Medicamentos');
+                $this->load->view('medicamentos');
                 
 	}
 }
