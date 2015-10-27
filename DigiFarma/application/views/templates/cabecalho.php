@@ -1,3 +1,33 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <?php echo link_tag('/assets/css/bootstrap.css'); ?>
+        <?php echo link_tag('/assets/css/styles.css'); ?>
+        <title>DigiFarma</title>
+    </head>
+<body>
+        <div class="container">
+            <div class="body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?php
+                        $image_properties = array(
+                            'src' => '/assets/imagens/cabecalho.jpg',
+                            'width' => '100%'
+                        );
+                        ?>
+                        <?php echo img($image_properties); ?>
+                        <?php $atts = array('class' => 'h1'); ?>
+                        <?php echo anchor('home/index', 'DigiFarma', $atts); ?>
+                    </div>
+                </div>
+
 <b>Faça Seu Login</b>   
     <br>
     <form class="form-horizontal" action="faz_login.php" method="post" >

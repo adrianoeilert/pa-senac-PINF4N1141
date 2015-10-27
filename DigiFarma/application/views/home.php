@@ -1,4 +1,4 @@
-<h1>AQUI FICA O CORPO DA PORRA TODA</h1>
+<h1>CORPO DO PROJETO</h1>
 <?php
                         $image_properties = array(
                             'src' => '/assets/imagens/corpo.jpg',

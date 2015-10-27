@@ -26,6 +26,5 @@ $atts = array('class' => 'btn btn-danger');
         <?php echo anchor('Sobre/index', 'Sobre a Empresa', $atts); ?>
 </div>
        </div>         
-    </div>
-  </div>     
+    </div>      
 </footer>

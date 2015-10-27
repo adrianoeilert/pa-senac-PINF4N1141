@@ -1,0 +1,28 @@
+.container{
+    background-color: #800;
+}
+body{
+    background-color: #8B3A3A;
+    text-align: center;
+}
+a:visited{
+    color: lightyellow;
+}
+a:hover{
+    color: silver;
+}
+a:active{
+    color: tomato;
+}
+::selection{
+    background-color: lightpink;
+    color: white;
+}
+::-moz-selection {
+    background-color: lightpink;
+    color: white;
+}
+
+#filebutton{
+    color: white;
+}

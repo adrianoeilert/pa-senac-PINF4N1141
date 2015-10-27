@@ -1,8 +1,7 @@
-<h1> Aqui fica a nutricao!!! </h1>
-
+<h1>AQUI ESTÃO OS PRODUTOS ESCOLHIDOS</h1>
 <?php
                         $image_properties = array(
-                            'src' => '/assets/imagens/nutricao.jpg',
+                            'src' => '/assets/imagens/produtos.jpg',
                             'width' => '50%'
                         );
                         ?>
