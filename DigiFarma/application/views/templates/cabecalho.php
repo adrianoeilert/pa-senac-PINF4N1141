@@ -8,53 +8,42 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
         <meta charset="utf-8">
         <?php echo link_tag('/assets/css/bootstrap.css'); ?>
-        <?php echo link_tag('/assets/css/styles.css'); ?>
-        <title>DigiFarma</title>
+        <?php echo link_tag('/assets/css/style.css'); ?>
+        
     </head>
 <body>
         <div class="container">
             <div class="body">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <?php
+                <?php
                         $image_properties = array(
                             'src' => '/assets/imagens/cabecalho.jpg',
                             'width' => '100%'
                         );
                         ?>
                         <?php echo img($image_properties); ?>
-                        <?php $atts = array('class' => 'h1'); ?>
+                
+                <br>
+                <br>
+                
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        
+                        <?php $atts = array('class' => 'h3'); ?>
                         <?php echo anchor('home/index', 'DigiFarma', $atts); ?>
                     </div>
-                </div>
+               
 
-<b>Faça Seu Login</b>   
-    <br>
-    <form class="form-horizontal" action="faz_login.php" method="post" >
-        <div class="form-group">
-            <label for="inputEmail" class="form-control">Email:</label>
-            <div class="col-lg-6">
-                <input type="email" class="form-control" name="email" id="inputEmail3" placeholder="Email">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword" class="form-control">Senha:</label>
-            <div class="col-lg-6">
-                <input type="password" class="form-control" name="senha" id="inputPassword3" placeholder="Senha">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-6">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="lembrar"> lembre-se de mim
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class=" col-lg-6">
-                <button type="submit" class="btn btn-default">Login</button>
-            </div>
-        </div>
-    </form>
+                    <div class="col-lg-6">
+
+                        <form method="POST" action="cadastrese.php">
+                            <label>Login:</label><input type="text" name="login" id="login"><br>
+                            <label>Senha:</label><input type="password" name="senha" id="senha"><br>
+                            <button type="button" class="btn btn-default navbar-btn">Entrar</button>
+                            
+                        </form>
+                    </div>
+                    </div>
+    
+                   <br>
+                   <br>

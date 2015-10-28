@@ -3,7 +3,7 @@
         <h2>CADASTRO</h2>
         <div class="form-group">
             <label for="inputName">Nome Completo:</label>
-            <input type="name" class="form-control" name="name" id="textarea" placeholder="Nome">
+            <input type="name" class="form-control" name="name" id="textarea" placeholder="Nome Completo">
         </div>
         <div class="form-group">
             <label for="inputName">Login:</label>
@@ -23,13 +23,15 @@
         </div>
         <div class="form-group">
             <label for="inputPassword">Confirmar Senha:</label>
-            <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Senha">
+            <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Confirmar Senha">
         </div>
         <h3>Endereço de entrega</h3>
         <div class="form-group">
             <label for="textarea">Endereço:</label>
             <textarea class="form-control" id="textarea" name="textarea" placeholder="Digite seu endereço completo, com logadouro, número e complemento, cidade, UF e CEP"></textarea>
         </div>
-        <button class="btn btn-success">Cadastrar</button>
+        <button class="btn btn-default">Cadastrar</button>
+        <br>
+        <br>
     </div>
 </div>
