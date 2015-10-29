@@ -31,6 +31,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         
                         <?php $atts = array('class' => 'h3'); ?>
                         <?php echo anchor('home/index', 'DigiFarma', $atts); ?>
+                        <br>
+                        <b> Sua farmácia na web! </b>
                     </div>
                
 

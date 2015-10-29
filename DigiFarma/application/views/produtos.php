@@ -6,3 +6,5 @@
                         );
                         ?>
                         <?php echo img($image_properties); ?>
+<br>
+<br>

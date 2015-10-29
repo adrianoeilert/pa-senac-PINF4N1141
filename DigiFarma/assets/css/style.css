@@ -1,7 +1,7 @@
 .container{
-    background-color: lightskyblue;
+    background-image: url('../imagens/f1.jpg');
 }
 body{
-    background-color: white;
+    background-image: url('../imagens/f5.jpg');
     text-align: center;
 }

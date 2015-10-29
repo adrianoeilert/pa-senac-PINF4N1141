@@ -9,14 +9,7 @@ class Admin extends CI_Controller {
         $this->load->view('areaadmin');
         $this->load->view('templates/rodape');
     }
-    public function cliente() {
-        $this->load->helper('html');
-        $this->load->helper('url');
-        $this->load->view('templates/cabecalho');
-        $this->load->view('templates/menu');
-        $this->load->view('clientes/listar_cliente');
-        $this->load->view('templates/rodape');
-    }
+    
     public function produtos() {
         $this->load->helper('html');
         $this->load->helper('url');
