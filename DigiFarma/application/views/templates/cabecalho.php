@@ -14,18 +14,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
         <div class="container">
             <div class="body">
-                <?php
-                        $image_properties = array(
-                            'src' => '/assets/imagens/cabecalho.jpg',
-                            'width' => '100%'
-                        );
-                        ?>
-                        <?php echo img($image_properties); ?>
-                
                 <br>
                 <br>
-                
-                
                 <div class="row">
                     <div class="col-lg-6">
                         

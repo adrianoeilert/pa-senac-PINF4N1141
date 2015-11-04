@@ -1,7 +1,8 @@
-<h1>ESTE É SEU CARRINHO DE COMPRAS!!!</h1>
+<h1>PARABÉNS, VOCÊ CONCLUIU SEU CADASTRO!!</h1>
+<br>
 <?php
                         $image_properties = array(
-                            'src' => '/assets/imagens/carrinho.jpg',
+                            'src' => '/assets/imagens/cadastrado.jpg',
                             'width' => '50%'
                         );
                         ?>
