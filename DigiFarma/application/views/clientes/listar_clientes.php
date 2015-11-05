@@ -6,7 +6,7 @@
             <?php
             $atts = array('class' => 'btn btn-success');
             ?>
-            <?php echo anchor('Pessoas/novo', 'Criar', $atts); ?>
+            <?php echo anchor('Clientes/novo', 'Criar', $atts); ?>
             <br>
             <li>
                 EXEMPLO 1

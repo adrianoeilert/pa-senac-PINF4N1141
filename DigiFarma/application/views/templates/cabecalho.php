@@ -25,16 +25,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <b> Sua farmácia na web! </b>
                     </div>
                
+<div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="form-group">
+            <label for="inputEmail">Email:</label>
+            <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Senha:</label>
+            <input type="password" class="form-control" name="senha" id="inputPassword" placeholder="Senha">
+        </div>
+        <?php
+        $atts = array('class' => 'btn btn-default');
+        ?>
+        <?php echo anchor('Admin/index', 'Login', $atts); ?>
+        <button class="btn btn-danger disabled">Sair</button>
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="lembrar"> Lembre-se de mim
+                </label>
+            </div>
+        </div>
 
-                    <div class="col-lg-6">
+    </div>
 
-                        <form method="POST" action="cadastrese.php">
-                            <label>Login:</label><input type="text" name="login" id="login"><br>
-                            <label>Senha:</label><input type="password" name="senha" id="senha"><br>
-                            <button type="button" class="btn btn-default navbar-btn">Entrar</button>
-                            
-                        </form>
-                    </div>
                     </div>
     
                    <br>

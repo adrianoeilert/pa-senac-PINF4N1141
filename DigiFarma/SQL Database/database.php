@@ -11,3 +11,6 @@ CREATE TABLE `digifarma`.`pessoas` (
   `endereco` VARCHAR(45) NOT NULL,
   `admin` CHAR(1) NOT NULL,
   PRIMARY KEY (`idPessoas`));
+
+    ALTER TABLE `digifarma`.`pessoas` 
+RENAME TO  `digifarma`.`clientes` ;
