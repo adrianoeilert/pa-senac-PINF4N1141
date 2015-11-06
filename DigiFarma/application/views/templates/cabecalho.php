@@ -18,13 +18,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <br>
                 <div class="row">
                     <div class="col-lg-6">
-                        
-                        <?php $atts = array('class' => 'h3'); ?>
-                        <?php echo anchor('home/index', 'DigiFarma', $atts); ?>
                         <br>
-                        <b> Sua farmácia na web! </b>
+                        <?php $atts = array('class' => 'h3'); ?>
+                        <?php echo anchor('home/index', 'DigiFarma - Sua farmácia na web!', $atts); ?>
+                        <br>                        
+                        <br>
+                         <?php
+                        $image_properties = array(
+                            'src' => '/assets/imagens/novembro.jpg',
+                            'width' => '60%'
+                        );
+                        ?>
+                        <?php echo img($image_properties); ?>
                     </div>
-               
+                       
+                    
 <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="form-group">
             <label for="inputEmail">Email:</label>
@@ -38,7 +46,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $atts = array('class' => 'btn btn-default');
         ?>
         <?php echo anchor('Admin/index', 'Login', $atts); ?>
-        <button class="btn btn-danger disabled">Sair</button>
+        <button class="btn btn-default">Sair</button>       
         <div class="form-group">
             <div class="checkbox">
                 <label>

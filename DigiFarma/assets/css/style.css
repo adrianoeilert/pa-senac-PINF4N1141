@@ -1,8 +1,12 @@
 .container{
     background-image: url('../imagens/b3.jpg');
     
+    
 }
 body{
     background-image: url('../imagens/a2.jpg');
     text-align: center;
+}
+form {
+    text-align: left;
 }
