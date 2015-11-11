@@ -3,7 +3,7 @@
 <?php
                         $image_properties = array(
                             'src' => '/assets/imagens/cadastrado.jpg',
-                            'width' => '50%'
+                            'width' => '25%'
                         );
                         ?>
                         <?php echo img($image_properties); ?>

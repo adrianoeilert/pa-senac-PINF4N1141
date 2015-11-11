@@ -1,24 +1,25 @@
+<?php
+$attsCriar = array('class' => 'btn btn-success');
+$attsEditar = array('class' => 'btn btn-warning btn-xs');
+$attsExcluir = array('class' => 'btn btn-danger btn-xs');
+?>
+
 <div class="row">
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
         <h2>Registro de Pessoas</h2>
-
-        <ul>
+        <?php
+        echo anchor('Clientes/novo', 'Criar', $attsCriar);
+        ?>
+        <ul class="lista">
             <?php
-            $atts = array('class' => 'btn btn-success');
-            ?>
-            <?php echo anchor('Clientes/novo', 'Criar', $atts); ?>
-            <br>
-            <li>
-                EXEMPLO 1
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Excluir</button>
-            </li>
-            <br>
-            <li>
-                EXEMPLO 2
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger">Excluir</button>
-            </li>
+            foreach ($clientes as $clientes) {
+                ?>
+                <li>
+                    <?php echo $clientes['nome']; ?> (<?php echo $clientes['email']; ?>)
+                    <?php echo anchor('clientes/editar/' . $clientes['idPessoas'], 'Editar', $attsEditar); ?>
+                    <?php echo anchor('clientes/excluir/' . $clientes['idPessoas'], 'Excluir', $attsExcluir); ?>
+                </li>
+            <?php } ?>
         </ul>
     </div>
 </div>
