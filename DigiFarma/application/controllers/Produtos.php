@@ -32,7 +32,7 @@ class Produtos extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('templates/cabecalho');
         $this->load->view('templates/menu');
-        $this->load->view('produtos/lista_produtos', $produtos);
+        $this->load->view('produtos/listar_produtos', $produtos);
         $this->load->view('templates/rodape');
     }
 }

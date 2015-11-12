@@ -12,12 +12,12 @@ $attsExcluir = array('class' => 'btn btn-danger btn-xs');
         ?>
         <ul class="lista">
             <?php
-            foreach ($clientes as $clientes) {
+            foreach ($clientes as $cliente) {
                 ?>
                 <li>
-                    <?php echo $clientes['nome']; ?> (<?php echo $clientes['email']; ?>)
-                    <?php echo anchor('clientes/editar/' . $clientes['idPessoas'], 'Editar', $attsEditar); ?>
-                    <?php echo anchor('clientes/excluir/' . $clientes['idPessoas'], 'Excluir', $attsExcluir); ?>
+                    <?php echo $cliente['nome']; ?> (<?php echo $cliente['email']; ?>)
+                    <?php //echo anchor('clientes/editar/' . $clientes['idPessoas'], 'Editar', $attsEditar); ?>
+                    <?php //echo anchor('clientes/excluir/' . $clientes['idPessoas'], 'Excluir', $attsExcluir); ?>
                 </li>
             <?php } ?>
         </ul>

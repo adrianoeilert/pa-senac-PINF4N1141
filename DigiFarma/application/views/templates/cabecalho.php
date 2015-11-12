@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                        
                     
 <div class="col-lg-4 col-md-4 col-sm-4">
-        <div class="form-group">
+        <div class="form-group" action="<?php echo base_url('Login/logar') ?>" method="post">
             <label for="inputEmail">Email:</label>
             <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email">
         </div>

@@ -21,7 +21,7 @@ class Clientes extends CI_Controller {
         $this->load->helper('url');
         $this->load->view('templates/cabecalho');
         $this->load->view('templates/menu');
-        $this->load->view('pessoas/listar_clientes', $clientes);
+        $this->load->view('clientes/listar_clientes', $clientes);
         $this->load->view('templates/rodape');
     
     }
@@ -29,7 +29,6 @@ class Clientes extends CI_Controller {
     public function salvar_novo() {
         $this->load->helper('html');
         $this->load->helper('url');
-        $this->load->database();
         $data = array(
             'nome' => $this->input->post('nome'),
             'login' => $this->input->post('login'),
