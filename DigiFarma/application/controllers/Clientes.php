@@ -32,7 +32,7 @@ class Clientes extends CI_Controller {
         $data = array(
             'nome' => $this->input->post('nome'),
             'login' => $this->input->post('login'),
-            'cpf' => $this->input->post('cpf'),            
+            'CPF' => $this->input->post('CPF'),            
             'email' => $this->input->post('email'),
             'senha' => $this->input->post('senha'),
             'confirmasenha' => $this->input->post('confirmasenha'),
@@ -41,30 +41,40 @@ class Clientes extends CI_Controller {
         $this->db->insert('clientes', $data);
         redirect('/clientes/okcadastrado', 'location', 301);
     }
+     public function atualizar() {
+        $this->load->helper('url');       
+        $id = $this->input->post('id');
+        $data1 = array(
+            'nome' => $this->input->post('nome'),
+            'login' => $this->input->post('login'),
+            'cpf' => $this->input->post('cpf'),            
+            'email' => $this->input->post('email'),
+            'senha' => $this->input->post('senha'),
+            'confirmasenha' => $this->input->post('confirmasenha'),
+            'endereco' => $this->input->post('endereco'),
+        );
+        $this->db->where('idpessoas', $id);
+        $this->db->update('clientes', $data1);
+        redirect('/clientes/lista', 'location', 301);
+     }
     
     public function editar($id) {
+        $editarclientes['clientes'] = $this->db->get_where('clientes', array('idpessoas' => $id))->result_array();
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/cabecalho');
         $this->load->view('templates/menu');
-        $this->load->view('pessoas/form_clientes');
+        $this->load->view('pessoas/form_clientes', $editarclientes);
         $this->load->view('templates/rodape');
-        /* $this->load->helper('html');
-          $this->load->helper('url');
-          $this->load->database();
-          $data = array(
-          'nome' => $this->input->post('nome'),
-          'login' => $this->input->post('login'),
-          'cpf' => $this->input->post('cpf'),
-          'data' => $this->input->post('data'),
-          'email' => $this->input->post('email'),
-          'senha' => $this->input->post('senha'),
-          'confirmasenha' => $this->input->post('confirmasenha'),
-          'endereco' => $this->input->post('endereco'),
-          );
-          $this->db->update('pessoas', $data);
-          redirect('/pessoas/listapessoas', 'location', 301); */
+    
     }
+    
+    public function deletar($id) {
+        $this->load->helper('url');
+        $this->db->delete('clientes', array('idpessoas' => $id));
+        redirect('/clientes/lista', 'location', 301);
+    }
+
  public function okcadastrado() {
         $this->load->helper('html');
         $this->load->helper('url');
