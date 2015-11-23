@@ -2,10 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Clientes extends CI_Controller {
     
-    public function index() {
-        echo 'lista';
-    }
-    
+      
     public function novo() {
         $this->load->helper('html');
         $this->load->helper('url');
@@ -15,18 +12,7 @@ class Clientes extends CI_Controller {
         $this->load->view('templates/rodape');
     }
     
-     public function lista() {
-        $clientes['clientes'] = $this->db->get('clientes')->result_array();
-        $this->load->helper('html');
-        $this->load->helper('url');
-        $this->load->view('templates/cabecalho');
-        $this->load->view('templates/menu');
-        $this->load->view('clientes/listar_clientes', $clientes);
-        $this->load->view('templates/rodape');
-    
-    }
-    
-    public function salvar_novo() {
+     public function salvar_novo() {
         $this->load->helper('html');
         $this->load->helper('url');
         $data = array(
@@ -39,9 +25,22 @@ class Clientes extends CI_Controller {
             'endereco' => $this->input->post('endereco'),
         );
         $this->db->insert('clientes', $data);
-        redirect('/clientes/okcadastrado', 'location', 301);
+        redirect('/clientes/okcadastrado');
     }
-     public function atualizar() {
+        
+    
+    public function editar($id) {
+        $editarclientes['clientes'] = $this->db->get_where('clientes', array('idpessoas' => $id))->result_array();
+        $this->load->helper('html');
+        $this->load->helper('url');
+        $this->load->view('templates/cabecalho');
+        $this->load->view('templates/menu');
+        $this->load->view('pessoas/form_clientes', $editarclientes);
+        $this->load->view('templates/rodape');
+    
+    }
+    
+      public function atualizar() {
         $this->load->helper('url');       
         $id = $this->input->post('id');
         $data1 = array(
@@ -55,26 +54,33 @@ class Clientes extends CI_Controller {
         );
         $this->db->where('idpessoas', $id);
         $this->db->update('clientes', $data1);
-        redirect('/clientes/lista', 'location', 301);
+        redirect('/clientes/lista');
      }
+     
+        
     
-    public function editar($id) {
-        $editarclientes['clientes'] = $this->db->get_where('clientes', array('idpessoas' => $id))->result_array();
+    public function deletar($id) {
+         $this->load->helper('url');
+        $this->load->database();
+        if ($this->db->delete('clientes', array('idpessoas' => $id))) {
+        redirect('/clientes/lista');
+        } else {
+            var_dump($this->db);
+        }
+    }
+
+     public function lista() {
+        $clientes['clientes'] = $this->db->get('clientes')->result_array();
         $this->load->helper('html');
         $this->load->helper('url');
         $this->load->view('templates/cabecalho');
         $this->load->view('templates/menu');
-        $this->load->view('pessoas/form_clientes', $editarclientes);
+        $this->load->view('clientes/listar_clientes', $clientes);
         $this->load->view('templates/rodape');
     
     }
     
-    public function deletar($id) {
-        $this->load->helper('url');
-        $this->db->delete('clientes', array('idpessoas' => $id));
-        redirect('/clientes/lista', 'location', 301);
-    }
-
+    
  public function okcadastrado() {
         $this->load->helper('html');
         $this->load->helper('url');
