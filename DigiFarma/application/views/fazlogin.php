@@ -1,4 +1,4 @@
-<?php
+<?php /*
 
 session_start();
 
@@ -12,3 +12,4 @@ if ($_POST['email'] == 'gabiru@gmail.com' && $_POST['senha'] == '123') {
     header('location:indexs.php?erro_login=1');
 }
 
+*/
