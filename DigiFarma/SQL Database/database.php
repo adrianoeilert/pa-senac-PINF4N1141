@@ -14,3 +14,12 @@ CREATE TABLE `digifarma`.`pessoas` (
 
     ALTER TABLE `digifarma`.`pessoas` 
 RENAME TO  `digifarma`.`clientes` ;
+
+
+CREATE TABLE `digifarma`.`produtos` (
+  `idprodutos` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `preco` DOUBLE NOT NULL,
+  `descricao` VARCHAR(100) NOT NULL,
+  `imagem` BLOB NOT NULL,
+  PRIMARY KEY (`idprodutos`));

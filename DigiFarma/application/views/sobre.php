@@ -15,13 +15,13 @@
         mas também ao atendimento e orientação do uso e aplicação dos medicamentos.<br>
         <br>
         <br>
-<?php
-                        $image_properties = array(
-                            'src' => '/assets/imagens/sobre.jpg',
-                            'width' => '50%'
-                        );
-                        ?>
-                        <?php echo img($image_properties); ?>
+        <?php
+        $image_properties = array(
+            'src' => '/assets/imagens/sobre.jpg',
+            'width' => '50%'
+        );
+        ?>
+        <?php echo img($image_properties); ?>
 
     </div>
 </div>
