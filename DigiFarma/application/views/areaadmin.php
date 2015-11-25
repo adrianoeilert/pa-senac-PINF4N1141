@@ -2,7 +2,7 @@
 <div class="row" id="areaadmin">
     <div class="col-lg-12">
         <?php
-         $atts = array('class' => 'btn btn-default');
+         $atts = array('class' => 'btn btn-primary');
          ?>
         <?php echo anchor('Produtos/lista', 'Cadastro de Produtos', $atts); ?>
         <br>

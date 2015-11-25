@@ -1,7 +1,7 @@
 <?php
-$attsCriar = array('class' => 'btn btn-success');
-$attsEditar = array('class' => 'btn btn-warning btn-xs');
-$attsExcluir = array('class' => 'btn btn-danger btn-xs');
+$attsCriar = array('class' => 'btn btn-default');
+$attsEditar = array('class' => 'btn btn-default btn-xs');
+$attsExcluir = array('class' => 'btn btn-primary btn-xs');
 ?>
 
 <div class="row">
@@ -16,8 +16,8 @@ $attsExcluir = array('class' => 'btn btn-danger btn-xs');
                 ?>
                 <li>
                     <?php echo $cliente['nome']; ?> (<?php echo $cliente['email']; ?>)
-                    <?php echo anchor('Clientes/editar/' . $clientes['idPessoas'], 'Editar', $attsEditar); ?>
-                    <?php echo anchor('Clientes/deletar/' . $clientes['idPessoas'], 'Excluir', $attsExcluir); ?>
+                    <?php echo anchor('clientes/editar/' . $cliente['idPessoas'], 'Editar', $attsEditar); ?>
+                    <?php echo anchor('clientes/deletar/' . $cliente['idPessoas'], 'Excluir', $attsExcluir); ?>
                 </li>
             <?php } ?>
         </ul>

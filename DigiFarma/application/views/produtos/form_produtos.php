@@ -19,7 +19,7 @@
                 <label for="filebutton">Enviar Imagem</label>
                 <input id="filebutton" name="imagem" class="input-file" type="file" value="<?php echo (isset($produto[0]['imagem']) ? $produto[0]['imagem'] : '') ?>">
             </div>
-            <button class="btn btn-success"><?php echo (isset($produto[0]['idprodutos']) ? 'Atualizar' : 'Cadastrar') ?> Produto</button>
+            <button class="btn btn-primary"><?php echo (isset($produto[0]['idprodutos']) ? 'Atualizar' : 'Cadastrar') ?> Produto</button>
         </form>
     </div>
 </div>
